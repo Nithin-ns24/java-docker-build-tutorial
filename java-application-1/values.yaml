@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: 
+  repository: nithin246/java-web-app
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
