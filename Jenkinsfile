@@ -55,7 +55,7 @@ pipeline {
         }
         stage('Deploy app on K8s') {
             steps {
-                withKubeConfig([credentialsId: 'my-AKS-cred']) {
+                withKubeConfig([credentialsId: 'my-AKS-cred-1']) {
                     sh 'helm install my-app -n dev'
                 }
              }
