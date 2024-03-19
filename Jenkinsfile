@@ -15,8 +15,7 @@ pipeline {
         PROJECT_NAME = "sonarqube-projectname"
     }
     tools {
-            maven 'Maven'
-            gradle 'Gradle'
+            maven 'Localmaven'
     }
 
     stages {
