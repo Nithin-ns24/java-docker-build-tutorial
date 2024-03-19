@@ -30,7 +30,7 @@ pipeline {
                 script {
                     def scannerHome = tool 'SonarScanner'
                     withSonarQubeEnv('SonarCloud') {
-                        sh "${scannerHome}/bin/sonar-scanner  -Dsonar.projectKey=$PROJECT_NAME  -Dsonar.organization=$ORGANIZATION  -Dsonar.host.url=https://sonarcloud.io  -Dsonar.login=${env.SONAR_TOKEN}"
+                        sh "${scannerHome}/bin/sonar-scanner  -Dsonar.projectKey=$projectKey  -Dsonar.organization=$organization  -Dsonar.host.url=https://sonarcloud.io  -Dsonar.login=${env.SONAR_TOKEN}"
                      }
                 }
              }
