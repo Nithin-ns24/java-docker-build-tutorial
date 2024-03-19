@@ -1,19 +1,19 @@
 pipeline {
     agent any
 
-    parameters {
-        string(name: 'BRANCH', defaultValue: 'main', description: 'Git branch to checkout')
-        string(name: 'REPO_URL', defaultValue: 'https://github.com/example/my-application.git', description: 'Git repository URL')
-        string(name: 'DOCKER_IMAGE', defaultValue: '', description: 'Docker Image')
-        string(name: 'TAG', defaultValue: 'latest', description: 'Docker tag')
-    }
-    environment {
-        JAVA_HOME = "/usr/lib/jvm/java-11-openjdk-amd64"
-        PATH = "/usr/local/bin:$PATH"
-        SONAR_TOKEN = credentials('sonar-token-id')
-        ORGANIZATION = "sonarqube-organization"
-        PROJECT_NAME = "sonarqube-projectname"
-    }
+#    parameters {
+#        string(name: 'BRANCH', defaultValue: 'main', description: 'Git branch to checkout')
+#        string(name: 'REPO_URL', defaultValue: 'https://github.com/example/my-application.git', description: 'Git repository URL')
+#        string(name: 'DOCKER_IMAGE', defaultValue: '', description: 'Docker Image')
+#        string(name: 'TAG', defaultValue: 'latest', description: 'Docker tag')
+#    }
+#    environment {
+#        JAVA_HOME = "/usr/lib/jvm/java-11-openjdk-amd64"
+#        PATH = "/usr/local/bin:$PATH"
+#        SONAR_TOKEN = credentials('sonar-token-id')
+#        ORGANIZATION = "sonarqube-organization"
+#        PROJECT_NAME = "sonarqube-projectname"
+#    }
     tools {
             maven 'Localmaven'
     }
